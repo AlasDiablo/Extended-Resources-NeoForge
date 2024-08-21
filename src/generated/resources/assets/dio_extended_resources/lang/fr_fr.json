@@ -1,0 +1,16 @@
+{
+  "item.dio_extended_resources.coal_dust": "Poussière de charbon",
+  "item.dio_extended_resources.coal_nugget": "Morceau de charbon",
+  "item.dio_extended_resources.copper_dust": "Poussière de cuivre",
+  "item.dio_extended_resources.copper_nugget": "Pépite de cuivre",
+  "item.dio_extended_resources.diamond_dust": "Poussière de diamant",
+  "item.dio_extended_resources.diamond_nugget": "Éclat de diamant",
+  "item.dio_extended_resources.emerald_dust": "Poussière d'émeraude",
+  "item.dio_extended_resources.emerald_nugget": "Éclat d'émeraude",
+  "item.dio_extended_resources.gold_dust": "Poussière d'or",
+  "item.dio_extended_resources.iron_dust": "Poussière de fer",
+  "item.dio_extended_resources.lapis_dust": "Poussière de lapis-lazuli",
+  "item.dio_extended_resources.lapis_nugget": "Fragment de lapis-lazuli",
+  "item.dio_extended_resources.redstone_nugget": "Petit tas de redstone",
+  "item_group.dio_extended_resources.tab": "Dio's Extended Resources"
+}

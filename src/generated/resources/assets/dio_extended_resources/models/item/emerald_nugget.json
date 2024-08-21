@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:item/generated",
+  "textures": {
+    "layer0": "dio_extended_resources:item/nugget/emerald_nugget"
+  }
+}

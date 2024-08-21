@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_diamond_nugget": {
+      "conditions": {
+        "items": [
+          {
+            "items": "dio_extended_resources:diamond_nugget"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "dio_extended_resources:diamond_from_nuggets"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_diamond_nugget"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "dio_extended_resources:diamond_from_nuggets"
+    ]
+  }
+}
