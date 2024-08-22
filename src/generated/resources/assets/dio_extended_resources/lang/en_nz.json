@@ -1,0 +1,16 @@
+{
+  "item.dio_extended_resources.coal_dust": "Coal Dust",
+  "item.dio_extended_resources.coal_nugget": "Coal Chunk",
+  "item.dio_extended_resources.copper_dust": "Copper Dust",
+  "item.dio_extended_resources.copper_nugget": "Copper Nugget",
+  "item.dio_extended_resources.diamond_dust": "Diamond Dust",
+  "item.dio_extended_resources.diamond_nugget": "Diamond Shard",
+  "item.dio_extended_resources.emerald_dust": "Emerald Dust",
+  "item.dio_extended_resources.emerald_nugget": "Emerald Shard",
+  "item.dio_extended_resources.gold_dust": "Gold Dust",
+  "item.dio_extended_resources.iron_dust": "Iron Dust",
+  "item.dio_extended_resources.lapis_dust": "Lapis Dust",
+  "item.dio_extended_resources.lapis_nugget": "Lapis Lazuli Fragment",
+  "item.dio_extended_resources.redstone_nugget": "Tiny Pile of Redstone",
+  "item_group.dio_extended_resources.tab": "Dio's Extended Resources"
+}

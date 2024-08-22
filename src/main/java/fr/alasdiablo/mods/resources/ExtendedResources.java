@@ -46,9 +46,16 @@ public class ExtendedResources {
         generator.addProvider(event.includeClient(), new ModelProvider(output, existingFileHelper));
 
         ExtendedResources.LOGGER.debug("Add Language Provider");
-        generator.addProvider(event.includeClient(), new LanguagesProvider.EnglishUnitedKingdom(output));
-        generator.addProvider(event.includeClient(), new LanguagesProvider.FrenchFrance(output));
-        generator.addProvider(event.includeClient(), new LanguagesProvider.EnglishUnitedStates(output));
+        generator.addProvider(event.includeClient(), new LanguagesProvider.French.Canada(output));
+        generator.addProvider(event.includeClient(), new LanguagesProvider.French.France(output));
+
+        generator.addProvider(event.includeClient(), new LanguagesProvider.English.Australia(output));
+        generator.addProvider(event.includeClient(), new LanguagesProvider.English.Canada(output));
+        generator.addProvider(event.includeClient(), new LanguagesProvider.English.NewZealand(output));
+        generator.addProvider(event.includeClient(), new LanguagesProvider.English.UnitedKingdom(output));
+        generator.addProvider(event.includeClient(), new LanguagesProvider.English.UnitedStates(output));
+
+
 
         ExtendedResources.LOGGER.debug("Add Server Provider");
 
