@@ -1,4 +1,4 @@
-// 1.21	2024-08-21T19:49:20.8942254	Tags for minecraft:item mod id dio_extended_resources
+// 1.21.1	2024-08-22T08:00:08.99998726	Tags for minecraft:item mod id dio_extended_resources
 26e51a12725ac5ff19b0f5f9d768a68c8360df90 data/c/tags/item/dusts.json
 5b8cebddabed5793b3af9a057293a26bad5e4591 data/c/tags/item/dusts/coal.json
 24e137df69cea076076a1d5a0321f4b9b305d0de data/c/tags/item/dusts/copper.json
@@ -7,6 +7,7 @@ dec458009476b573a3f539d5dc5cbf10c3df48a7 data/c/tags/item/dusts/diamond.json
 eb8439c259b95eae027d65e4651f1f4b6d8af830 data/c/tags/item/dusts/gold.json
 8bda9493ea59546cc5d986ae3ee5ddce89767f13 data/c/tags/item/dusts/iron.json
 8516616968b89c809e5f2dbb42cf15fb93322b9f data/c/tags/item/dusts/lapis.json
+cdf096cc27066513cb3a2c28a7c70fce96eab56a data/c/tags/item/nuggets.json
 340d4f13acdce07d4550ea6ecbe4f49622072ddf data/c/tags/item/nuggets/coal.json
 1520a5919ebe77262b0745a80bf0e19786950d21 data/c/tags/item/nuggets/copper.json
 873895c8260dfbc22daebf14b44c6fe833f53666 data/c/tags/item/nuggets/diamond.json

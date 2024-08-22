@@ -35,13 +35,6 @@ public class ItemsTagsProvider  extends ItemTagsProvider {
         this.tag(DUSTS_IRON).add(IRON_DUST.get());
         this.tag(DUSTS_LAPIS).add(LAPIS_DUST.get());
 
-        this.tag(NUGGETS_COAL).add(COAL_NUGGET.get());
-        this.tag(NUGGETS_COPPER).add(COPPER_NUGGET.get());
-        this.tag(NUGGETS_DIAMOND).add(DIAMOND_NUGGET.get());
-        this.tag(NUGGETS_EMERALD).add(EMERALD_NUGGET.get());
-        this.tag(NUGGETS_LAPIS).add(LAPIS_NUGGET.get());
-        this.tag(NUGGETS_REDSTONE).add(REDSTONE_NUGGET.get());
-
         this.tag(Tags.Items.DUSTS).addTag(DUSTS_COAL);
         this.tag(Tags.Items.DUSTS).addTag(DUSTS_COPPER);
         this.tag(Tags.Items.DUSTS).addTag(DUSTS_DIAMOND);
@@ -49,5 +42,19 @@ public class ItemsTagsProvider  extends ItemTagsProvider {
         this.tag(Tags.Items.DUSTS).addTag(DUSTS_GOLD);
         this.tag(Tags.Items.DUSTS).addTag(DUSTS_IRON);
         this.tag(Tags.Items.DUSTS).addTag(DUSTS_LAPIS);
+
+        this.tag(NUGGETS_COAL).add(COAL_NUGGET.get());
+        this.tag(NUGGETS_COPPER).add(COPPER_NUGGET.get());
+        this.tag(NUGGETS_DIAMOND).add(DIAMOND_NUGGET.get());
+        this.tag(NUGGETS_EMERALD).add(EMERALD_NUGGET.get());
+        this.tag(NUGGETS_LAPIS).add(LAPIS_NUGGET.get());
+        this.tag(NUGGETS_REDSTONE).add(REDSTONE_NUGGET.get());
+
+        this.tag(Tags.Items.NUGGETS).addTag(NUGGETS_COAL);
+        this.tag(Tags.Items.NUGGETS).addTag(NUGGETS_COPPER);
+        this.tag(Tags.Items.NUGGETS).addTag(NUGGETS_DIAMOND);
+        this.tag(Tags.Items.NUGGETS).addTag(NUGGETS_EMERALD);
+        this.tag(Tags.Items.NUGGETS).addTag(NUGGETS_LAPIS);
+        this.tag(Tags.Items.NUGGETS).addTag(NUGGETS_REDSTONE);
     }
 }
