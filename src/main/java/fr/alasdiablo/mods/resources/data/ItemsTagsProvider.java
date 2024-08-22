@@ -14,7 +14,7 @@ import javax.annotation.Nullable;
 import java.util.concurrent.CompletableFuture;
 
 import static fr.alasdiablo.mods.resources.registry.ExtendedResourcesItems.*;
-import static fr.alasdiablo.mods.resources.registry.ExtendedResourcesTags.Items.*;
+import static fr.alasdiablo.mods.resources.tag.ExtendedResourcesTags.Items.*;
 
 public class ItemsTagsProvider  extends ItemTagsProvider {
     public ItemsTagsProvider(

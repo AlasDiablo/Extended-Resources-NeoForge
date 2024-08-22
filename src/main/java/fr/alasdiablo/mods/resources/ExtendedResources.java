@@ -4,7 +4,7 @@ import com.mojang.logging.LogUtils;
 import fr.alasdiablo.mods.resources.data.*;
 import fr.alasdiablo.mods.resources.registry.ExtendedResourcesCreativeTabs;
 import fr.alasdiablo.mods.resources.registry.ExtendedResourcesItems;
-import fr.alasdiablo.mods.resources.registry.ExtendedResourcesTags;
+import fr.alasdiablo.mods.resources.tag.ExtendedResourcesTags;
 import net.minecraft.core.HolderLookup;
 import net.minecraft.data.DataGenerator;
 import net.minecraft.data.PackOutput;
