@@ -1,9 +1,9 @@
 ## About Dio's Extended Resources
 
-Dio's Extended Resources is utility mod focused on adding base item and ressource to make mod more inter-compatible.
+Dio's Extended Resources is a utility mod that focuses on adding base items and resources to make mods more compatible.
 
 ## Getting Started
 
-Dio's Extended Resources currently add nugget variant for every minable ressource, it also adds dust variant.
+Dio's Extended Resources currently add a Nugget variant for each minable resource, as well as a Dust variant.
 
-This is allowing the Dio's mods suit to use the same base item and reduce the duplication of base items.
+This will allow Dio's mods suit to use the same base item and reduce the duplication of base items.
