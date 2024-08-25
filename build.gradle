@@ -151,7 +151,8 @@ var generateModMetadata = tasks.register("generateModMetadata", ProcessResources
             mod_license            : mod_license,
             mod_version            : mod_version,
             mod_authors            : mod_authors,
-            mod_description        : mod_description
+            mod_description        : mod_description,
+            diolib_version_range   : diolib_version_range
     ]
     inputs.properties replaceProperties
     expand replaceProperties
