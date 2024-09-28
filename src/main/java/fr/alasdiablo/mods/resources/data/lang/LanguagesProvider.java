@@ -1,4 +1,4 @@
-package fr.alasdiablo.mods.resources.data;
+package fr.alasdiablo.mods.resources.data.lang;
 
 import fr.alasdiablo.mods.resources.ExtendedResources;
 import fr.alasdiablo.mods.resources.registry.ExtendedResourcesItems;

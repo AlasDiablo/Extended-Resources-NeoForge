@@ -1,4 +1,4 @@
-package fr.alasdiablo.mods.resources.data;
+package fr.alasdiablo.mods.resources.data.datamaps;
 
 import fr.alasdiablo.mods.resources.registry.ExtendedResourcesItems;
 import net.minecraft.core.HolderLookup;

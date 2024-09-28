@@ -1,7 +1,12 @@
 package fr.alasdiablo.mods.resources;
 
 import com.mojang.logging.LogUtils;
-import fr.alasdiablo.mods.resources.data.*;
+import fr.alasdiablo.mods.resources.data.datamaps.DataMapsProvider;
+import fr.alasdiablo.mods.resources.data.lang.LanguagesProvider;
+import fr.alasdiablo.mods.resources.data.model.ModelProvider;
+import fr.alasdiablo.mods.resources.data.recipe.RecipesProvider;
+import fr.alasdiablo.mods.resources.data.tag.BlocksTagsProvider;
+import fr.alasdiablo.mods.resources.data.tag.ItemsTagsProvider;
 import fr.alasdiablo.mods.resources.registry.ExtendedResourcesCreativeTabs;
 import fr.alasdiablo.mods.resources.registry.ExtendedResourcesItems;
 import fr.alasdiablo.mods.resources.tag.ExtendedResourcesTags;
@@ -54,7 +59,6 @@ public class ExtendedResources {
         generator.addProvider(event.includeClient(), new LanguagesProvider.English.NewZealand(output));
         generator.addProvider(event.includeClient(), new LanguagesProvider.English.UnitedKingdom(output));
         generator.addProvider(event.includeClient(), new LanguagesProvider.English.UnitedStates(output));
-
 
 
         ExtendedResources.LOGGER.debug("Add Server Provider");

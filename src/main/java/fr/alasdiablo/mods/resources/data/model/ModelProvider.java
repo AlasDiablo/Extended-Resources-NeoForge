@@ -1,4 +1,4 @@
-package fr.alasdiablo.mods.resources.data;
+package fr.alasdiablo.mods.resources.data.model;
 
 import fr.alasdiablo.mods.resources.ExtendedResources;
 import net.minecraft.data.PackOutput;
