@@ -11,7 +11,7 @@ public class ExtendedResourcesTags {
         public static void init() {}
 
         public static final TagKey<Item> TINY_DUSTS          = commonTag("tiny_dusts");
-        public static final TagKey<Item> TINY_DUSTS_REDSTONE = commonTag("tiny_dusts");
+        public static final TagKey<Item> TINY_DUSTS_REDSTONE = commonTag("tiny_dusts/redstone");
 
         public static final TagKey<Item> DUSTS_COAL    = commonTag("dusts/coal");
         public static final TagKey<Item> DUSTS_COPPER  = commonTag("dusts/copper");
