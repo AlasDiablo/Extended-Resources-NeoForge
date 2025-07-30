@@ -1,3 +1,8 @@
+### 2.0.0
+
+- Update to mc 1.21.8
+- Add Netherite Nugget and Netherite Fragment
+
 ### 1.1.1
 
 - Fix `tiny_dusts` common tag

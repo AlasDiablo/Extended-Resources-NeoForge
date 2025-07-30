@@ -28,6 +28,8 @@ public class ExtendedResourcesTags {
         public static final TagKey<Item> NUGGETS_LAPIS    = commonTag("nuggets/lapis");
         public static final TagKey<Item> NUGGETS_REDSTONE = commonTag("nuggets/redstone");
 
+        public static final TagKey<Item> NUGGETS_NETHERITE    = commonTag("nuggets/netherite");
+
         private static @NotNull TagKey<Item> commonTag(String name) {
             return ItemTags.create(ResourceLocation.fromNamespaceAndPath("c", name));
         }

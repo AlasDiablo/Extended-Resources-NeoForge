@@ -11,6 +11,8 @@
   "item.dio_extended_resources.iron_dust": "Iron Dust",
   "item.dio_extended_resources.lapis_dust": "Lapis Dust",
   "item.dio_extended_resources.lapis_nugget": "Lapis Lazuli Fragment",
+  "item.dio_extended_resources.netherite_fragment": "Netherite Fragment",
+  "item.dio_extended_resources.netherite_nugget": "Netherite Nugget",
   "item.dio_extended_resources.redstone_nugget": "Tiny Pile of Redstone",
   "item_group.dio_extended_resources.tab": "Dio's Extended Resources"
 }

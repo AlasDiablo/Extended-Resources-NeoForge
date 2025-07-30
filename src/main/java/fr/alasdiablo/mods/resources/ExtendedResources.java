@@ -3,25 +3,19 @@ package fr.alasdiablo.mods.resources;
 import com.mojang.logging.LogUtils;
 import fr.alasdiablo.mods.resources.data.datamaps.DataMapsProvider;
 import fr.alasdiablo.mods.resources.data.lang.LanguagesProvider;
-import fr.alasdiablo.mods.resources.data.model.ModelProvider;
+import fr.alasdiablo.mods.resources.data.model.ModelsProvider;
 import fr.alasdiablo.mods.resources.data.recipe.RecipesProvider;
 import fr.alasdiablo.mods.resources.data.tag.BlocksTagsProvider;
 import fr.alasdiablo.mods.resources.data.tag.ItemsTagsProvider;
 import fr.alasdiablo.mods.resources.registry.ExtendedResourcesCreativeTabs;
 import fr.alasdiablo.mods.resources.registry.ExtendedResourcesItems;
 import fr.alasdiablo.mods.resources.tag.ExtendedResourcesTags;
-import net.minecraft.core.HolderLookup;
-import net.minecraft.data.DataGenerator;
-import net.minecraft.data.PackOutput;
 import net.neoforged.bus.api.IEventBus;
 import net.neoforged.fml.ModContainer;
 import net.neoforged.fml.common.Mod;
-import net.neoforged.neoforge.common.data.ExistingFileHelper;
 import net.neoforged.neoforge.data.event.GatherDataEvent;
 import org.jetbrains.annotations.NotNull;
 import org.slf4j.Logger;
-
-import java.util.concurrent.CompletableFuture;
 
 @SuppressWarnings("unused")
 @Mod(ExtendedResources.MOD_ID)
@@ -38,40 +32,35 @@ public class ExtendedResources {
         modEventBus.addListener(this::gatherData);
     }
 
-    private void gatherData(@NotNull GatherDataEvent event) {
+    private void gatherData(@NotNull GatherDataEvent.Client event) {
         ExtendedResources.LOGGER.debug("Start data generator");
-        final DataGenerator                            generator          = event.getGenerator();
-        final PackOutput                               output             = generator.getPackOutput();
-        final CompletableFuture<HolderLookup.Provider> lookup             = event.getLookupProvider();
-        final ExistingFileHelper                       existingFileHelper = event.getExistingFileHelper();
 
         ExtendedResources.LOGGER.debug("Add Client Provider");
 
         ExtendedResources.LOGGER.debug("Add Item Model Provider");
-        generator.addProvider(event.includeClient(), new ModelProvider(output, existingFileHelper));
+        event.createProvider(ModelsProvider::new);
 
         ExtendedResources.LOGGER.debug("Add Language Provider");
-        generator.addProvider(event.includeClient(), new LanguagesProvider.French.Canada(output));
-        generator.addProvider(event.includeClient(), new LanguagesProvider.French.France(output));
+        event.createProvider(LanguagesProvider.French.Canada::new);
+        event.createProvider(LanguagesProvider.French.France::new);
 
-        generator.addProvider(event.includeClient(), new LanguagesProvider.English.Australia(output));
-        generator.addProvider(event.includeClient(), new LanguagesProvider.English.Canada(output));
-        generator.addProvider(event.includeClient(), new LanguagesProvider.English.NewZealand(output));
-        generator.addProvider(event.includeClient(), new LanguagesProvider.English.UnitedKingdom(output));
-        generator.addProvider(event.includeClient(), new LanguagesProvider.English.UnitedStates(output));
+        event.createProvider(LanguagesProvider.English.Australia::new);
+        event.createProvider(LanguagesProvider.English.Canada::new);
+        event.createProvider(LanguagesProvider.English.NewZealand::new);
+        event.createProvider(LanguagesProvider.English.UnitedKingdom::new);
+        event.createProvider(LanguagesProvider.English.UnitedStates::new);
 
 
         ExtendedResources.LOGGER.debug("Add Server Provider");
 
         ExtendedResources.LOGGER.debug("Add Tags Provider");
-        final BlocksTagsProvider blockTagsProvider = new BlocksTagsProvider(output, lookup, existingFileHelper);
-        generator.addProvider(event.includeServer(), blockTagsProvider);
-        generator.addProvider(event.includeServer(), new ItemsTagsProvider(output, lookup, blockTagsProvider, existingFileHelper));
+        event.createProvider(BlocksTagsProvider::new);
+        event.createProvider(ItemsTagsProvider::new);
 
         ExtendedResources.LOGGER.debug("Add Recipes Provider");
-        generator.addProvider(event.includeServer(), new RecipesProvider(output, lookup));
+        event.createProvider(RecipesProvider.Runner::new);
 
         ExtendedResources.LOGGER.debug("Add DataMap Provider");
-        generator.addProvider(event.includeServer(), new DataMapsProvider(output, lookup));
+        event.createProvider(DataMapsProvider::new);
     }
 }

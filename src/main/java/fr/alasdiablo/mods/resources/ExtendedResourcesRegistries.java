@@ -15,4 +15,7 @@ public class ExtendedResourcesRegistries {
     public static final String EMERALD_NUGGET  = "emerald_nugget";
     public static final String LAPIS_NUGGET    = "lapis_nugget";
     public static final String REDSTONE_NUGGET = "redstone_nugget";
+
+    public static final String NETHERITE_NUGGET   = "netherite_nugget";
+    public static final String NETHERITE_FRAGMENT = "netherite_fragment";
 }

@@ -6,6 +6,7 @@ import net.minecraft.data.PackOutput;
 import net.neoforged.neoforge.common.data.DataMapProvider;
 import net.neoforged.neoforge.registries.datamaps.builtin.FurnaceFuel;
 import net.neoforged.neoforge.registries.datamaps.builtin.NeoForgeDataMaps;
+import org.jetbrains.annotations.NotNull;
 
 import java.util.concurrent.CompletableFuture;
 
@@ -15,7 +16,7 @@ public class DataMapsProvider extends DataMapProvider {
     }
 
     @Override
-    protected void gather() {
+    protected void gather(@NotNull  HolderLookup.Provider provider) {
         this.builder(NeoForgeDataMaps.FURNACE_FUELS)
                 .add(ExtendedResourcesItems.COAL_NUGGET, new FurnaceFuel(1600 / 9), false);
     }

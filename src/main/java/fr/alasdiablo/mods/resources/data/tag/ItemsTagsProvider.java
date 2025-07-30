@@ -3,14 +3,10 @@ package fr.alasdiablo.mods.resources.data.tag;
 import fr.alasdiablo.mods.resources.ExtendedResources;
 import net.minecraft.core.HolderLookup;
 import net.minecraft.data.PackOutput;
-import net.minecraft.data.tags.ItemTagsProvider;
-import net.minecraft.data.tags.TagsProvider;
-import net.minecraft.world.level.block.Block;
 import net.neoforged.neoforge.common.Tags;
-import net.neoforged.neoforge.common.data.ExistingFileHelper;
+import net.neoforged.neoforge.common.data.ItemTagsProvider;
 import org.jetbrains.annotations.NotNull;
 
-import javax.annotation.Nullable;
 import java.util.concurrent.CompletableFuture;
 
 import static fr.alasdiablo.mods.resources.registry.ExtendedResourcesItems.*;
@@ -18,11 +14,9 @@ import static fr.alasdiablo.mods.resources.tag.ExtendedResourcesTags.Items.*;
 
 public class ItemsTagsProvider extends ItemTagsProvider {
     public ItemsTagsProvider(
-            PackOutput output, CompletableFuture<HolderLookup.Provider> lookup,
-            @NotNull TagsProvider<Block> blockTagsProvider,
-            @Nullable ExistingFileHelper existingFileHelper
+            PackOutput output, CompletableFuture<HolderLookup.Provider> lookup
     ) {
-        super(output, lookup, blockTagsProvider.contentsGetter(), ExtendedResources.MOD_ID, existingFileHelper);
+        super(output, lookup, ExtendedResources.MOD_ID);
     }
 
     @Override
@@ -49,6 +43,7 @@ public class ItemsTagsProvider extends ItemTagsProvider {
         this.tag(NUGGETS_EMERALD).add(EMERALD_NUGGET.get());
         this.tag(NUGGETS_LAPIS).add(LAPIS_NUGGET.get());
         this.tag(NUGGETS_REDSTONE).add(REDSTONE_NUGGET.get());
+        this.tag(NUGGETS_NETHERITE).add(NETHERITE_NUGGET.get());
 
         this.tag(TINY_DUSTS_REDSTONE).add(REDSTONE_NUGGET.get());
         this.tag(TINY_DUSTS).addTag(TINY_DUSTS_REDSTONE);
@@ -59,5 +54,6 @@ public class ItemsTagsProvider extends ItemTagsProvider {
         this.tag(Tags.Items.NUGGETS).addTag(NUGGETS_EMERALD);
         this.tag(Tags.Items.NUGGETS).addTag(NUGGETS_LAPIS);
         this.tag(Tags.Items.NUGGETS).addTag(NUGGETS_REDSTONE);
+        this.tag(Tags.Items.NUGGETS).addTag(NUGGETS_NETHERITE);
     }
 }

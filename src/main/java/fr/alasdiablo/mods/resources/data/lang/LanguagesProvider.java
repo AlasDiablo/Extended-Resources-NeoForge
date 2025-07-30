@@ -42,6 +42,9 @@ public class LanguagesProvider {
                 this.add(ExtendedResourcesItems.EMERALD_NUGGET.get(), "Emerald Shard");
                 this.add(ExtendedResourcesItems.LAPIS_NUGGET.get(), "Lapis Lazuli Fragment");
                 this.add(ExtendedResourcesItems.REDSTONE_NUGGET.get(), "Tiny Pile of Redstone");
+
+                this.add(ExtendedResourcesItems.NETHERITE_NUGGET.get(), "Netherite Nugget");
+                this.add(ExtendedResourcesItems.NETHERITE_FRAGMENT.get(), "Netherite Fragment");
             }
         }
 
@@ -100,6 +103,9 @@ public class LanguagesProvider {
                 this.add(ExtendedResourcesItems.EMERALD_NUGGET.get(), "Éclat d'émeraude");
                 this.add(ExtendedResourcesItems.LAPIS_NUGGET.get(), "Fragment de lapis-lazuli");
                 this.add(ExtendedResourcesItems.REDSTONE_NUGGET.get(), "Petit tas de redstone");
+
+                this.add(ExtendedResourcesItems.NETHERITE_NUGGET.get(), "Pépite de netherite");
+                this.add(ExtendedResourcesItems.NETHERITE_FRAGMENT.get(), "Éclat de netherite");
             }
         }
 

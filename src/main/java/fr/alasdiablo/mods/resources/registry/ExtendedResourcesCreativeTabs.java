@@ -1,6 +1,6 @@
 package fr.alasdiablo.mods.resources.registry;
 
-import fr.alasdiablo.mods.lib.api.item.GroundCreativeModeTab;
+import fr.alasdiablo.mods.lib.item.GroundCreativeModeTab;
 import fr.alasdiablo.mods.resources.ExtendedResources;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.network.chat.Component;

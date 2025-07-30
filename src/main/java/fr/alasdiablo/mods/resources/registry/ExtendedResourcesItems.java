@@ -27,6 +27,9 @@ public class ExtendedResourcesItems {
     public static final DeferredItem<Item> LAPIS_NUGGET    = ITEMS.registerSimpleItem(ExtendedResourcesRegistries.LAPIS_NUGGET);
     public static final DeferredItem<Item> REDSTONE_NUGGET = ITEMS.registerSimpleItem(ExtendedResourcesRegistries.REDSTONE_NUGGET);
 
+    public static final DeferredItem<Item> NETHERITE_NUGGET   = ITEMS.registerSimpleItem(ExtendedResourcesRegistries.NETHERITE_NUGGET);
+    public static final DeferredItem<Item> NETHERITE_FRAGMENT = ITEMS.registerSimpleItem(ExtendedResourcesRegistries.NETHERITE_FRAGMENT);
+
     public static void displayItemsGenerator(CreativeModeTab.ItemDisplayParameters parameters, @NotNull CreativeModeTab.Output output) {
         output.accept(COAL_DUST.get());
         output.accept(COPPER_DUST.get());
@@ -42,6 +45,9 @@ public class ExtendedResourcesItems {
         output.accept(EMERALD_NUGGET.get());
         output.accept(LAPIS_NUGGET.get());
         output.accept(REDSTONE_NUGGET.get());
+
+        output.accept(NETHERITE_NUGGET.get());
+        output.accept(NETHERITE_FRAGMENT.get());
     }
 
     public static void init(IEventBus bus) {

@@ -11,6 +11,8 @@
   "item.dio_extended_resources.iron_dust": "Poussière de fer",
   "item.dio_extended_resources.lapis_dust": "Poussière de lapis-lazuli",
   "item.dio_extended_resources.lapis_nugget": "Fragment de lapis-lazuli",
+  "item.dio_extended_resources.netherite_fragment": "Éclat de netherite",
+  "item.dio_extended_resources.netherite_nugget": "Pépite de netherite",
   "item.dio_extended_resources.redstone_nugget": "Petit tas de redstone",
   "item_group.dio_extended_resources.tab": "Dio's Extended Resources"
 }
