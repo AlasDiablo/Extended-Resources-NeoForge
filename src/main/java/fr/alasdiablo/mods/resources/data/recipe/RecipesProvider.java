@@ -7,8 +7,13 @@ import net.minecraft.data.PackOutput;
 import net.minecraft.data.recipes.RecipeCategory;
 import net.minecraft.data.recipes.RecipeOutput;
 import net.minecraft.data.recipes.RecipeProvider;
+import net.minecraft.data.recipes.SimpleCookingRecipeBuilder;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.item.Items;
+import net.minecraft.world.item.crafting.BlastingRecipe;
+import net.minecraft.world.item.crafting.Ingredient;
+import net.minecraft.world.item.crafting.RecipeSerializer;
+import net.minecraft.world.item.crafting.SmeltingRecipe;
 import net.minecraft.world.level.ItemLike;
 import org.jetbrains.annotations.NotNull;
 
@@ -38,7 +43,40 @@ public class RecipesProvider extends RecipeProvider {
                 .save(
                         this.output,
                         ResourceLocation.fromNamespaceAndPath(
-                                ExtendedResources.MOD_ID, RecipesProvider.getSimpleRecipeName(Items.NETHERITE_SCRAP) + "_from_fragments"
+                                ExtendedResources.MOD_ID,
+                                RecipesProvider.getSimpleRecipeName(Items.NETHERITE_SCRAP) + "_from_fragments"
+                        ).toString()
+                );
+
+        this.shapeless(RecipeCategory.MISC, ExtendedResourcesItems.NETHERITE_FRAGMENT, 4)
+                .requires(Items.NETHERITE_SCRAP)
+                .unlockedBy(RecipesProvider.getHasName(ExtendedResourcesItems.NETHERITE_FRAGMENT), this.has(ExtendedResourcesItems.NETHERITE_FRAGMENT))
+                .save(this.output);
+
+        this.oreCooking(ExtendedResourcesItems.COPPER_DUST, Items.COPPER_INGOT, 0.7F, "copper_ingot");
+        this.oreCooking(ExtendedResourcesItems.GOLD_DUST, Items.GOLD_INGOT, 1.0F, "gold_ingot");
+        this.oreCooking(ExtendedResourcesItems.IRON_DUST, Items.IRON_INGOT, 0.7F, "iron_ingot");
+    }
+
+    protected void oreCooking(ItemLike ingredient, ItemLike result, float experience, String group) {
+        SimpleCookingRecipeBuilder.generic(Ingredient.of(ingredient), RecipeCategory.MISC, result, experience, 200, RecipeSerializer.SMELTING_RECIPE, SmeltingRecipe::new)
+                .group(group)
+                .unlockedBy(getHasName(ingredient), this.has(ingredient))
+                .save(
+                        this.output,
+                        ResourceLocation.fromNamespaceAndPath(
+                                ExtendedResources.MOD_ID,
+                                getItemName(result) + "_from_smelting_" + getItemName(ingredient)).toString()
+                );
+
+        SimpleCookingRecipeBuilder.generic(Ingredient.of(ingredient), RecipeCategory.MISC, result, experience, 100, RecipeSerializer.BLASTING_RECIPE, BlastingRecipe::new)
+                .group(group)
+                .unlockedBy(getHasName(ingredient), this.has(ingredient))
+                .save(
+                        this.output,
+                        ResourceLocation.fromNamespaceAndPath(
+                                ExtendedResources.MOD_ID,
+                                getItemName(result) + "_from_blasting_" + getItemName(ingredient)
                         ).toString()
                 );
     }
@@ -61,7 +99,7 @@ public class RecipesProvider extends RecipeProvider {
                 .save(
                         this.output,
                         ResourceLocation.fromNamespaceAndPath(
-                                ExtendedResources.MOD_ID, RecipesProvider.getSimpleRecipeName(packed) + "_from_nuggets"
+                                ExtendedResources.MOD_ID, getItemName(packed) + "_from_nuggets"
                         ).toString()
                 );
     }

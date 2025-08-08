@@ -1,3 +1,13 @@
+### 2.0.2
+
+- Fix badly named recipes
+- Fix duplication exploite via badly defined recipes
+
+### 2.0.1
+
+- Add missing copper, gold and iron dust ore smelting recipes
+- Fix netherrite scrap recipes
+
 ### 2.0.0
 
 - Update to mc 1.21.8

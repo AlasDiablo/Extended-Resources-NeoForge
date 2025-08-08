@@ -5,9 +5,8 @@
     "#": "dio_extended_resources:netherite_fragment"
   },
   "pattern": [
-    "###",
-    "###",
-    "###"
+    "##",
+    "##"
   ],
   "result": {
     "count": 1,
