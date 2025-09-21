@@ -2,6 +2,7 @@ package fr.alasdiablo.mods.resources.data.recipe;
 
 import fr.alasdiablo.mods.resources.ExtendedResources;
 import fr.alasdiablo.mods.resources.registry.ExtendedResourcesItems;
+import fr.alasdiablo.mods.resources.tag.ExtendedResourcesTags;
 import net.minecraft.core.HolderLookup;
 import net.minecraft.data.PackOutput;
 import net.minecraft.data.recipes.RecipeCategory;
@@ -9,12 +10,16 @@ import net.minecraft.data.recipes.RecipeOutput;
 import net.minecraft.data.recipes.RecipeProvider;
 import net.minecraft.data.recipes.SimpleCookingRecipeBuilder;
 import net.minecraft.resources.ResourceLocation;
+import net.minecraft.tags.ItemTags;
+import net.minecraft.tags.TagKey;
+import net.minecraft.world.item.Item;
 import net.minecraft.world.item.Items;
 import net.minecraft.world.item.crafting.BlastingRecipe;
 import net.minecraft.world.item.crafting.Ingredient;
 import net.minecraft.world.item.crafting.RecipeSerializer;
 import net.minecraft.world.item.crafting.SmeltingRecipe;
 import net.minecraft.world.level.ItemLike;
+import net.neoforged.neoforge.common.Tags;
 import org.jetbrains.annotations.NotNull;
 
 import java.util.concurrent.CompletableFuture;
@@ -56,6 +61,40 @@ public class RecipesProvider extends RecipeProvider {
         this.oreCooking(ExtendedResourcesItems.COPPER_DUST, Items.COPPER_INGOT, 0.7F, "copper_ingot");
         this.oreCooking(ExtendedResourcesItems.GOLD_DUST, Items.GOLD_INGOT, 1.0F, "gold_ingot");
         this.oreCooking(ExtendedResourcesItems.IRON_DUST, Items.IRON_INGOT, 0.7F, "iron_ingot");
+
+        this.gearRecipes(ExtendedResourcesItems.WOODEN_GEAR, Tags.Items.RODS_WOODEN, ItemTags.PLANKS);
+        this.gearRecipes(ExtendedResourcesItems.COPPER_GEAR, ExtendedResourcesTags.Items.RODS_COPPER, ExtendedResourcesTags.Items.PLATES_COPPER);
+        this.gearRecipes(ExtendedResourcesItems.IRON_GEAR, ExtendedResourcesTags.Items.RODS_IRON, ExtendedResourcesTags.Items.PLATES_IRON);
+        this.gearRecipes(ExtendedResourcesItems.GOLD_GEAR, ExtendedResourcesTags.Items.RODS_GOLD, ExtendedResourcesTags.Items.PLATES_GOLD);
+
+        this.shaped(RecipeCategory.TOOLS, ExtendedResourcesItems.METAL_HAMMER)
+                .define('I', Tags.Items.INGOTS_IRON)
+                .define('S', Tags.Items.RODS_WOODEN)
+                .pattern("  I")
+                .pattern("SSI")
+                .pattern("  I")
+                .unlockedBy("has_iron", this.has(Tags.Items.INGOTS_IRON))
+                .unlockedBy("has_wooden_rod", this.has(Tags.Items.RODS_WOODEN))
+                .save(this.output);
+        this.shaped(RecipeCategory.TOOLS, ExtendedResourcesItems.METAL_CUTTER)
+                .define('I', Tags.Items.INGOTS_IRON)
+                .define('P', ExtendedResourcesTags.Items.PLATES_IRON)
+                .define('S', Tags.Items.RODS_WOODEN)
+                .pattern(" I ")
+                .pattern("SPI")
+                .pattern(" S ")
+                .unlockedBy("has_iron", this.has(Tags.Items.INGOTS_IRON))
+                .unlockedBy("has_iron_plate", this.has(ExtendedResourcesTags.Items.PLATES_IRON))
+                .unlockedBy("has_wooden_rod", this.has(Tags.Items.RODS_WOODEN))
+                .save(this.output);
+
+        this.metalPlate(ExtendedResourcesItems.COPPER_PLATE, Tags.Items.INGOTS_COPPER);
+        this.metalPlate(ExtendedResourcesItems.IRON_PLATE, Tags.Items.INGOTS_IRON);
+        this.metalPlate(ExtendedResourcesItems.GOLD_PLATE, Tags.Items.INGOTS_GOLD);
+
+        this.metalRod(ExtendedResourcesItems.COPPER_ROD, ExtendedResourcesTags.Items.PLATES_COPPER);
+        this.metalRod(ExtendedResourcesItems.IRON_ROD, ExtendedResourcesTags.Items.PLATES_IRON);
+        this.metalRod(ExtendedResourcesItems.GOLD_ROD, ExtendedResourcesTags.Items.PLATES_GOLD);
     }
 
     protected void oreCooking(ItemLike ingredient, ItemLike result, float experience, String group) {
@@ -102,6 +141,36 @@ public class RecipesProvider extends RecipeProvider {
                                 ExtendedResources.MOD_ID, getItemName(packed) + "_from_nuggets"
                         ).toString()
                 );
+    }
+
+    protected void gearRecipes(ItemLike item, TagKey<Item> rod, TagKey<Item> plate) {
+        this.shaped(RecipeCategory.MISC, item)
+                .define('R', rod)
+                .define('P', plate)
+                .pattern(" R ")
+                .pattern("RPR")
+                .pattern(" R ")
+                .unlockedBy("has_rod", this.has(rod))
+                .unlockedBy("has_plate", this.has(plate))
+                .save(this.output);
+    }
+
+    protected void metalPlate(ItemLike item, TagKey<Item> ingot) {
+        this.shapeless(RecipeCategory.MISC, item)
+                .requires(ingot)
+                .requires(ExtendedResourcesItems.METAL_HAMMER)
+                .unlockedBy("has_ingot", this.has(ingot))
+                .unlockedBy("has_metal_hammer", this.has(ExtendedResourcesItems.METAL_HAMMER))
+                .save(this.output);
+    }
+
+    protected void metalRod(ItemLike item, TagKey<Item> ingot) {
+        this.shapeless(RecipeCategory.MISC, item, 2)
+                .requires(ingot)
+                .requires(ExtendedResourcesItems.METAL_CUTTER)
+                .unlockedBy("has_ingot", this.has(ingot))
+                .unlockedBy("has_metal_cutter", this.has(ExtendedResourcesItems.METAL_CUTTER))
+                .save(this.output);
     }
 
     public static class Runner extends RecipeProvider.Runner {

@@ -28,6 +28,21 @@ public class ExtendedResourcesTags {
         public static final TagKey<Item> NUGGETS_LAPIS    = commonTag("nuggets/lapis");
         public static final TagKey<Item> NUGGETS_REDSTONE = commonTag("nuggets/redstone");
 
+        public static final TagKey<Item> PLATES   = commonTag("plates");
+        public static final TagKey<Item> PLATES_COPPER   = commonTag("plates/copper");
+        public static final TagKey<Item> PLATES_IRON    = commonTag("plates/iron");
+        public static final TagKey<Item> PLATES_GOLD   = commonTag("plates/gold");
+
+        public static final TagKey<Item> GEARS   = commonTag("gears");
+        public static final TagKey<Item> GEARS_WOODEN   = commonTag("gears/wooden");
+        public static final TagKey<Item> GEARS_COPPER   = commonTag("gears/copper");
+        public static final TagKey<Item> GEARS_IRON    = commonTag("gears/iron");
+        public static final TagKey<Item> GEARS_GOLD   = commonTag("gears/gold");
+
+        public static final TagKey<Item> RODS_COPPER   = commonTag("rods/copper");
+        public static final TagKey<Item> RODS_IRON    = commonTag("rods/iron");
+        public static final TagKey<Item> RODS_GOLD   = commonTag("rods/gold");
+
         public static final TagKey<Item> NUGGETS_NETHERITE    = commonTag("nuggets/netherite");
 
         private static @NotNull TagKey<Item> commonTag(String name) {

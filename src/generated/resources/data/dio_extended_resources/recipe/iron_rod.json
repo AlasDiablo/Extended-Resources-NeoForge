@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    "#c:plates/iron",
+    "dio_extended_resources:metal_cutter"
+  ],
+  "result": {
+    "count": 2,
+    "id": "dio_extended_resources:iron_rod"
+  }
+}

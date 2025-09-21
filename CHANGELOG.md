@@ -1,3 +1,11 @@
+### 2.1.0
+
+- Add copper and iron plates
+- Add wooden, copper, iron and gold gears
+- Add copper, iron and gold rods
+- Add tool to craft plates and rods
+- Update textures
+
 ### 2.0.2
 
 - Fix badly named recipes

@@ -18,4 +18,20 @@ public class ExtendedResourcesRegistries {
 
     public static final String NETHERITE_NUGGET   = "netherite_nugget";
     public static final String NETHERITE_FRAGMENT = "netherite_fragment";
+
+    public static final String COPPER_PLATE = "copper_plate";
+    public static final String IRON_PLATE   = "iron_plate";
+    public static final String GOLD_PLATE   = "gold_plate";
+
+    public static final String WOODEN_GEAR  = "wooden_gear";
+    public static final String COPPER_GEAR  = "copper_gear";
+    public static final String IRON_GEAR    = "iron_gear";
+    public static final String GOLD_GEAR    = "gold_gear";
+
+    public static final String COPPER_ROD  = "copper_rod";
+    public static final String IRON_ROD    = "iron_rod";
+    public static final String GOLD_ROD    = "gold_rod";
+
+    public static final String METAL_HAMMER = "metal_hammer";
+    public static final String METAL_CUTTER = "metal_cutter";
 }

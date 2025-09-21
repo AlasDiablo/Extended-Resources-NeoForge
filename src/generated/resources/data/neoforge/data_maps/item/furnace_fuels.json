@@ -1,7 +1,10 @@
 {
   "values": {
     "dio_extended_resources:coal_nugget": {
-      "burn_time": 177
+      "burn_time": 175
+    },
+    "dio_extended_resources:wooden_gear": {
+      "burn_time": 300
     }
   }
 }

@@ -2,6 +2,9 @@ package fr.alasdiablo.mods.resources.registry;
 
 import fr.alasdiablo.mods.resources.ExtendedResources;
 import fr.alasdiablo.mods.resources.ExtendedResourcesRegistries;
+import fr.alasdiablo.mods.resources.item.DurabilityCraftingItem;
+import net.minecraft.core.registries.Registries;
+import net.minecraft.resources.ResourceKey;
 import net.minecraft.world.item.CreativeModeTab;
 import net.minecraft.world.item.Item;
 import net.neoforged.bus.api.IEventBus;
@@ -30,6 +33,28 @@ public class ExtendedResourcesItems {
     public static final DeferredItem<Item> NETHERITE_NUGGET   = ITEMS.registerSimpleItem(ExtendedResourcesRegistries.NETHERITE_NUGGET);
     public static final DeferredItem<Item> NETHERITE_FRAGMENT = ITEMS.registerSimpleItem(ExtendedResourcesRegistries.NETHERITE_FRAGMENT);
 
+    public static final DeferredItem<Item> COPPER_PLATE = ITEMS.registerSimpleItem(ExtendedResourcesRegistries.COPPER_PLATE);
+    public static final DeferredItem<Item> IRON_PLATE = ITEMS.registerSimpleItem(ExtendedResourcesRegistries.IRON_PLATE);
+    public static final DeferredItem<Item> GOLD_PLATE = ITEMS.registerSimpleItem(ExtendedResourcesRegistries.GOLD_PLATE);
+
+    public static final DeferredItem<Item> WOODEN_GEAR = ITEMS.registerSimpleItem(ExtendedResourcesRegistries.WOODEN_GEAR);
+    public static final DeferredItem<Item> COPPER_GEAR = ITEMS.registerSimpleItem(ExtendedResourcesRegistries.COPPER_GEAR);
+    public static final DeferredItem<Item> IRON_GEAR = ITEMS.registerSimpleItem(ExtendedResourcesRegistries.IRON_GEAR);
+    public static final DeferredItem<Item> GOLD_GEAR = ITEMS.registerSimpleItem(ExtendedResourcesRegistries.GOLD_GEAR);
+
+    public static final DeferredItem<Item> COPPER_ROD = ITEMS.registerSimpleItem(ExtendedResourcesRegistries.COPPER_ROD);
+    public static final DeferredItem<Item> IRON_ROD = ITEMS.registerSimpleItem(ExtendedResourcesRegistries.IRON_ROD);
+    public static final DeferredItem<Item> GOLD_ROD = ITEMS.registerSimpleItem(ExtendedResourcesRegistries.GOLD_ROD);
+
+    public static final DeferredItem<Item> METAL_HAMMER = ITEMS.register(
+            ExtendedResourcesRegistries.METAL_HAMMER,
+            (key) -> new DurabilityCraftingItem(new Item.Properties().durability(200).setId(ResourceKey.create(Registries.ITEM, key)))
+    );
+    public static final DeferredItem<Item> METAL_CUTTER = ITEMS.register(
+            ExtendedResourcesRegistries.METAL_CUTTER,
+            (key) -> new DurabilityCraftingItem(new Item.Properties().durability(200).setId(ResourceKey.create(Registries.ITEM, key)))
+    );
+
     public static void displayItemsGenerator(CreativeModeTab.ItemDisplayParameters parameters, @NotNull CreativeModeTab.Output output) {
         output.accept(COAL_DUST.get());
         output.accept(COPPER_DUST.get());
@@ -48,6 +73,22 @@ public class ExtendedResourcesItems {
 
         output.accept(NETHERITE_NUGGET.get());
         output.accept(NETHERITE_FRAGMENT.get());
+
+        output.accept(COPPER_PLATE.get());
+        output.accept(IRON_PLATE.get());
+        output.accept(GOLD_PLATE.get());
+
+        output.accept(WOODEN_GEAR.get());
+        output.accept(COPPER_GEAR.get());
+        output.accept(IRON_GEAR.get());
+        output.accept(GOLD_GEAR.get());
+
+        output.accept(COPPER_ROD.get());
+        output.accept(IRON_ROD.get());
+        output.accept(GOLD_ROD.get());
+
+        output.accept(METAL_HAMMER.get());
+        output.accept(METAL_CUTTER.get());
     }
 
     public static void init(IEventBus bus) {

@@ -17,7 +17,10 @@ public class DataMapsProvider extends DataMapProvider {
 
     @Override
     protected void gather(@NotNull  HolderLookup.Provider provider) {
+        this.builder(NeoForgeDataMaps.FURNACE_FUELS) // Less than vanilla (1600 / 9)
+                .add(ExtendedResourcesItems.COAL_NUGGET, new FurnaceFuel(175), false);
+
         this.builder(NeoForgeDataMaps.FURNACE_FUELS)
-                .add(ExtendedResourcesItems.COAL_NUGGET, new FurnaceFuel(1600 / 9), false);
+                .add(ExtendedResourcesItems.WOODEN_GEAR, new FurnaceFuel(300), false);
     }
 }

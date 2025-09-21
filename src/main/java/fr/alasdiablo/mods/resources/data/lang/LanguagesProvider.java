@@ -45,6 +45,22 @@ public class LanguagesProvider {
 
                 this.add(ExtendedResourcesItems.NETHERITE_NUGGET.get(), "Netherite Nugget");
                 this.add(ExtendedResourcesItems.NETHERITE_FRAGMENT.get(), "Netherite Fragment");
+
+                this.add(ExtendedResourcesItems.COPPER_PLATE.get(), "Copper Plate");
+                this.add(ExtendedResourcesItems.IRON_PLATE.get(), "Iron Plate");
+                this.add(ExtendedResourcesItems.GOLD_PLATE.get(), "Golden Plate");
+
+                this.add(ExtendedResourcesItems.WOODEN_GEAR.get(), "Wooden Gear");
+                this.add(ExtendedResourcesItems.COPPER_GEAR.get(), "Copper Gear");
+                this.add(ExtendedResourcesItems.IRON_GEAR.get(), "Iron Gear");
+                this.add(ExtendedResourcesItems.GOLD_GEAR.get(), "Golden Gear");
+
+                this.add(ExtendedResourcesItems.COPPER_ROD.get(), "Copper Rod");
+                this.add(ExtendedResourcesItems.IRON_ROD.get(), "Iron Rod");
+                this.add(ExtendedResourcesItems.GOLD_ROD.get(), "Golden Rod");
+
+                this.add(ExtendedResourcesItems.METAL_HAMMER.get(), "Forging hammer");
+                this.add(ExtendedResourcesItems.METAL_CUTTER.get(), "Metal cutters");
             }
         }
 
@@ -106,6 +122,22 @@ public class LanguagesProvider {
 
                 this.add(ExtendedResourcesItems.NETHERITE_NUGGET.get(), "Pépite de netherite");
                 this.add(ExtendedResourcesItems.NETHERITE_FRAGMENT.get(), "Éclat de netherite");
+
+                this.add(ExtendedResourcesItems.COPPER_PLATE.get(), "Plaque de cuivre");
+                this.add(ExtendedResourcesItems.IRON_PLATE.get(), "Plaque d'fer");
+                this.add(ExtendedResourcesItems.GOLD_PLATE.get(), "Plaque d'or");
+
+                this.add(ExtendedResourcesItems.WOODEN_GEAR.get(), "Roue dentée en bois");
+                this.add(ExtendedResourcesItems.COPPER_GEAR.get(), "Roue dentée en cuivre");
+                this.add(ExtendedResourcesItems.IRON_GEAR.get(), "Roue dentée en fer");
+                this.add(ExtendedResourcesItems.GOLD_GEAR.get(), "Roue dentée en or");
+
+                this.add(ExtendedResourcesItems.COPPER_ROD.get(), "Tige en cuivre");
+                this.add(ExtendedResourcesItems.IRON_ROD.get(), "Tige en fer");
+                this.add(ExtendedResourcesItems.GOLD_ROD.get(), "Tige en or");
+
+                this.add(ExtendedResourcesItems.METAL_HAMMER.get(), "Marteau de forge");
+                this.add(ExtendedResourcesItems.METAL_CUTTER.get(), "Cisaille à métaux");
             }
         }
 

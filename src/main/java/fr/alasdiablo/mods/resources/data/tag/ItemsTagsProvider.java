@@ -55,5 +55,31 @@ public class ItemsTagsProvider extends ItemTagsProvider {
         this.tag(Tags.Items.NUGGETS).addTag(NUGGETS_LAPIS);
         this.tag(Tags.Items.NUGGETS).addTag(NUGGETS_REDSTONE);
         this.tag(Tags.Items.NUGGETS).addTag(NUGGETS_NETHERITE);
+
+        this.tag(PLATES_COPPER).add(COPPER_PLATE.get());
+        this.tag(PLATES_IRON).add(IRON_PLATE.get());
+        this.tag(PLATES_GOLD).add(GOLD_PLATE.get());
+
+        this.tag(PLATES).addTag(PLATES_COPPER);
+        this.tag(PLATES).addTag(PLATES_IRON);
+        this.tag(PLATES).addTag(PLATES_GOLD);
+
+        this.tag(GEARS_WOODEN).add(WOODEN_GEAR.get());
+        this.tag(GEARS_COPPER).add(COPPER_GEAR.get());
+        this.tag(GEARS_IRON).add(IRON_GEAR.get());
+        this.tag(GEARS_GOLD).add(GOLD_GEAR.get());
+
+        this.tag(GEARS).addTag(GEARS_WOODEN);
+        this.tag(GEARS).addTag(GEARS_COPPER);
+        this.tag(GEARS).addTag(GEARS_IRON);
+        this.tag(GEARS).addTag(GEARS_GOLD);
+
+        this.tag(RODS_COPPER).add(COPPER_ROD.get());
+        this.tag(RODS_IRON).add(IRON_ROD.get());
+        this.tag(RODS_GOLD).add(GOLD_ROD.get());
+
+        this.tag(Tags.Items.RODS).addTag(RODS_COPPER);
+        this.tag(Tags.Items.RODS).addTag(RODS_IRON);
+        this.tag(Tags.Items.RODS).addTag(RODS_GOLD);
     }
 }

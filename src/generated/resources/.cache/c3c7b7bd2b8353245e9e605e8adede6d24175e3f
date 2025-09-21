@@ -1,4 +1,4 @@
-// 1.21.8	2025-07-30T14:37:22.7303627	Tags for minecraft:item mod id dio_extended_resources
+// 1.21.8	2025-09-21T18:03:23.6254986	Tags for minecraft:item mod id dio_extended_resources
 26e51a12725ac5ff19b0f5f9d768a68c8360df90 data/c/tags/item/dusts.json
 5b8cebddabed5793b3af9a057293a26bad5e4591 data/c/tags/item/dusts/coal.json
 24e137df69cea076076a1d5a0321f4b9b305d0de data/c/tags/item/dusts/copper.json
@@ -7,6 +7,11 @@ dec458009476b573a3f539d5dc5cbf10c3df48a7 data/c/tags/item/dusts/diamond.json
 eb8439c259b95eae027d65e4651f1f4b6d8af830 data/c/tags/item/dusts/gold.json
 8bda9493ea59546cc5d986ae3ee5ddce89767f13 data/c/tags/item/dusts/iron.json
 8516616968b89c809e5f2dbb42cf15fb93322b9f data/c/tags/item/dusts/lapis.json
+8d0a705132045a4b7174b419dc1c87dc5f233253 data/c/tags/item/gears.json
+7d024dd61775fe6489f85f8f7512998ba41b3131 data/c/tags/item/gears/copper.json
+6533c7d8c0947fa7973c12dc4827829b34fdaadc data/c/tags/item/gears/gold.json
+e5e9e7b5c0f2265e1c2be4c176227e10d41fee94 data/c/tags/item/gears/iron.json
+4e2e6ade8c9a5d3504946341d4c5e0425f061e3c data/c/tags/item/gears/wooden.json
 a84349e3160ceefb6ef24288a287ecdb76429d3b data/c/tags/item/nuggets.json
 340d4f13acdce07d4550ea6ecbe4f49622072ddf data/c/tags/item/nuggets/coal.json
 1520a5919ebe77262b0745a80bf0e19786950d21 data/c/tags/item/nuggets/copper.json
@@ -15,5 +20,13 @@ a84349e3160ceefb6ef24288a287ecdb76429d3b data/c/tags/item/nuggets.json
 0f124c2392ea166f94f3f177b8cb5c5c81cad8dc data/c/tags/item/nuggets/lapis.json
 377595468c71dd0967e919846bc610dee484a7fa data/c/tags/item/nuggets/netherite.json
 e13dcb070cd64c55249a05b5ca280631ee3498d1 data/c/tags/item/nuggets/redstone.json
+5c03ad96a7b2aca32ae08ad92f4ad6f98eccf161 data/c/tags/item/plates.json
+bf8ab88f97dc92425f15b2cf4ab5a35ca920e789 data/c/tags/item/plates/copper.json
+023f394b88f281bac85b6130e58711adf2f85f89 data/c/tags/item/plates/gold.json
+907620a0399eead7eebca06db9f75ab169da3579 data/c/tags/item/plates/iron.json
+f1cef24147823bd170fcb77bc260904e7197de4e data/c/tags/item/rods.json
+a0ac397605a142005d868f5f5caf3153ee2e94d4 data/c/tags/item/rods/copper.json
+ec0c6cd2fc1215d49aa18f1aa091befa6865b4bf data/c/tags/item/rods/gold.json
+c81df3ceca5a8cb304803d054a2b866144237153 data/c/tags/item/rods/iron.json
 c790b68f506e5b5f4e1c1742f31c70c5a2c39967 data/c/tags/item/tiny_dusts.json
 e13dcb070cd64c55249a05b5ca280631ee3498d1 data/c/tags/item/tiny_dusts/redstone.json

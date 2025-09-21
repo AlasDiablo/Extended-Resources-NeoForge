@@ -36,5 +36,21 @@ public class ModelsProvider extends ModelProvider {
 
         itemModels.generateFlatItem(ExtendedResourcesItems.NETHERITE_NUGGET.get(), ModelTemplates.FLAT_ITEM);
         itemModels.generateFlatItem(ExtendedResourcesItems.NETHERITE_FRAGMENT.get(), ModelTemplates.FLAT_ITEM);
+
+        itemModels.generateFlatItem(ExtendedResourcesItems.COPPER_PLATE.get(), ModelTemplates.FLAT_ITEM);
+        itemModels.generateFlatItem(ExtendedResourcesItems.IRON_PLATE.get(), ModelTemplates.FLAT_ITEM);
+        itemModels.generateFlatItem(ExtendedResourcesItems.GOLD_PLATE.get(), ModelTemplates.FLAT_ITEM);
+
+        itemModels.generateFlatItem(ExtendedResourcesItems.WOODEN_GEAR.get(), ModelTemplates.FLAT_ITEM);
+        itemModels.generateFlatItem(ExtendedResourcesItems.COPPER_GEAR.get(), ModelTemplates.FLAT_ITEM);
+        itemModels.generateFlatItem(ExtendedResourcesItems.IRON_GEAR.get(), ModelTemplates.FLAT_ITEM);
+        itemModels.generateFlatItem(ExtendedResourcesItems.GOLD_GEAR.get(), ModelTemplates.FLAT_ITEM);
+
+        itemModels.generateFlatItem(ExtendedResourcesItems.COPPER_ROD.get(), ModelTemplates.FLAT_ITEM);
+        itemModels.generateFlatItem(ExtendedResourcesItems.IRON_ROD.get(), ModelTemplates.FLAT_ITEM);
+        itemModels.generateFlatItem(ExtendedResourcesItems.GOLD_ROD.get(), ModelTemplates.FLAT_ITEM);
+
+        itemModels.generateFlatItem(ExtendedResourcesItems.METAL_HAMMER.get(), ModelTemplates.FLAT_ITEM);
+        itemModels.generateFlatItem(ExtendedResourcesItems.METAL_CUTTER.get(), ModelTemplates.FLAT_ITEM);
     }
 }
