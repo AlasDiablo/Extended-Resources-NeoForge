@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:blasting",
+  "category": "misc",
+  "cookingtime": 1600,
+  "experience": 10.0,
+  "group": "steel_ingot",
+  "ingredient": "dio_extended_resources:enriched_iron_dust",
+  "result": {
+    "count": 1,
+    "id": "dio_extended_resources:steel_ingot"
+  }
+}

@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    "minecraft:emerald",
+    "dio_extended_resources:mortar_and_pestle"
+  ],
+  "result": {
+    "count": 1,
+    "id": "dio_extended_resources:emerald_dust"
+  }
+}

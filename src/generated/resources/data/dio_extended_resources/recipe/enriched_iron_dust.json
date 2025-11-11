@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    "#c:dusts/iron",
+    "#c:dusts/coal",
+    "dio_extended_resources:mortar_and_pestle"
+  ],
+  "result": {
+    "count": 1,
+    "id": "dio_extended_resources:enriched_iron_dust"
+  }
+}

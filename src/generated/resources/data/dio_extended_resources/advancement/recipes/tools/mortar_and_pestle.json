@@ -1,0 +1,43 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_mortar": {
+      "conditions": {
+        "items": [
+          {
+            "items": "dio_extended_resources:mortar"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_pestle": {
+      "conditions": {
+        "items": [
+          {
+            "items": "dio_extended_resources:pestle"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "dio_extended_resources:mortar_and_pestle"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_pestle",
+      "has_mortar"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "dio_extended_resources:mortar_and_pestle"
+    ]
+  }
+}

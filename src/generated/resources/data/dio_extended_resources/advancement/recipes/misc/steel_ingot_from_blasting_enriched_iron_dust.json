@@ -1,11 +1,11 @@
 {
   "parent": "minecraft:recipes/root",
   "criteria": {
-    "has_copper_ingot": {
+    "has_enriched_iron_dust": {
       "conditions": {
         "items": [
           {
-            "items": "minecraft:copper_ingot"
+            "items": "dio_extended_resources:enriched_iron_dust"
           }
         ]
       },
@@ -13,7 +13,7 @@
     },
     "has_the_recipe": {
       "conditions": {
-        "recipe": "dio_extended_resources:copper_nugget"
+        "recipe": "dio_extended_resources:steel_ingot_from_blasting_enriched_iron_dust"
       },
       "trigger": "minecraft:recipe_unlocked"
     }
@@ -21,12 +21,12 @@
   "requirements": [
     [
       "has_the_recipe",
-      "has_copper_ingot"
+      "has_enriched_iron_dust"
     ]
   ],
   "rewards": {
     "recipes": [
-      "dio_extended_resources:copper_nugget"
+      "dio_extended_resources:steel_ingot_from_blasting_enriched_iron_dust"
     ]
   }
 }

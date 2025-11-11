@@ -6,6 +6,8 @@
     "#c:dusts/emerald",
     "#c:dusts/gold",
     "#c:dusts/iron",
-    "#c:dusts/lapis"
+    "#c:dusts/lapis",
+    "#c:dusts/enriched_iron",
+    "#c:dusts/steel"
   ]
 }

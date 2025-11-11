@@ -1,11 +1,11 @@
 {
   "parent": "minecraft:recipes/root",
   "criteria": {
-    "has_netherite_ingot": {
+    "has_plates_gold": {
       "conditions": {
         "items": [
           {
-            "items": "minecraft:netherite_ingot"
+            "items": "#c:plates/gold"
           }
         ]
       },
@@ -13,7 +13,7 @@
     },
     "has_the_recipe": {
       "conditions": {
-        "recipe": "dio_extended_resources:netherite_nugget"
+        "recipe": "dio_extended_resources:golden_pickaxe"
       },
       "trigger": "minecraft:recipe_unlocked"
     }
@@ -21,12 +21,12 @@
   "requirements": [
     [
       "has_the_recipe",
-      "has_netherite_ingot"
+      "has_plates_gold"
     ]
   ],
   "rewards": {
     "recipes": [
-      "dio_extended_resources:netherite_nugget"
+      "dio_extended_resources:golden_pickaxe"
     ]
   }
 }

@@ -5,6 +5,7 @@ import fr.alasdiablo.mods.resources.data.datamaps.DataMapsProvider;
 import fr.alasdiablo.mods.resources.data.lang.LanguagesProvider;
 import fr.alasdiablo.mods.resources.data.model.ModelsProvider;
 import fr.alasdiablo.mods.resources.data.recipe.RecipesProvider;
+import fr.alasdiablo.mods.resources.data.recipe.VanillaRecipiesProvider;
 import fr.alasdiablo.mods.resources.data.tag.BlocksTagsProvider;
 import fr.alasdiablo.mods.resources.data.tag.ItemsTagsProvider;
 import fr.alasdiablo.mods.resources.registry.ExtendedResourcesCreativeTabs;
@@ -59,6 +60,7 @@ public class ExtendedResources {
 
         ExtendedResources.LOGGER.debug("Add Recipes Provider");
         event.createProvider(RecipesProvider.Runner::new);
+        event.createProvider(VanillaRecipiesProvider.Runner::new);
 
         ExtendedResources.LOGGER.debug("Add DataMap Provider");
         event.createProvider(DataMapsProvider::new);

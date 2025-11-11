@@ -1,3 +1,11 @@
+### 2.2.0
+
+- Add Mortar and pestle tools to create dust
+- Add enriched iron dust
+- Add steel items
+- Increase hammer and cutter durability from 200 to 256
+- Add variant for vanilla recipes
+
 ### 2.1.0
 
 - Add copper and iron plates

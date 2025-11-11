@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "I": "#c:plates/iron",
+    "S": "#c:rods/iron"
+  },
+  "pattern": [
+    "S",
+    "I"
+  ],
+  "result": {
+    "count": 1,
+    "id": "dio_extended_resources:pestle"
+  }
+}

@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "equipment",
+  "key": {
+    "M": "dio_extended_resources:mortar",
+    "P": "dio_extended_resources:pestle"
+  },
+  "pattern": [
+    "P",
+    "M"
+  ],
+  "result": {
+    "count": 1,
+    "id": "dio_extended_resources:mortar_and_pestle"
+  }
+}

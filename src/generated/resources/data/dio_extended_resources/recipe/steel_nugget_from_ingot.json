@@ -1,0 +1,11 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    "dio_extended_resources:steel_ingot"
+  ],
+  "result": {
+    "count": 9,
+    "id": "dio_extended_resources:steel_nugget"
+  }
+}

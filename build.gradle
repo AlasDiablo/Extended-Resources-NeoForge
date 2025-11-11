@@ -128,7 +128,7 @@ configurations {
 }
 
 dependencies {
-    implementation("curse.maven:dio_lib-422014:6818297")
+    implementation("curse.maven:dio-lib-422014:7210099")
 
     // compile against the JEI API but do not include it at runtime
      compileOnly("mezz.jei:jei-${minecraft_version}-common-api:${jei_version}")
